@@ -1,0 +1,22 @@
+{
+  "short_name": "Emprendimiento",
+  "name": "Kinlan's AirHorner of Infamy",
+  "icons": [
+    {
+      "src": "./src/images/codificacion.svg",
+      "type": "image/svg",
+      "sizes": "48x48"
+    },
+    {
+      "src": "./src/images/codificacion.svg",
+      "type": "image/svg",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./src/images/codificacion.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html?launcher=true"
+}

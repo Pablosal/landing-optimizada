@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="preload"
+      as="fetch"
+      href="../manifest.json"
+      onload="this.rel='manifest'"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./style.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+      crossorigin
+    />
+    <noscript>
+      <link rel="stylesheet" crossorigin href="./style.css"
+    /></noscript>
+    <link
+      rel="preload"
+      href="./mobile.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+      crossorigin
+    />
+    <noscript>
+      <link rel="stylesheet" crossorigin href="./mobile.css"
+    /></noscript>
+
+    <!-- prettier-ignore -->
+    <style>*,::after,::before{box-sizing:border-box;margin:0;padding:0;line-height:1.7em}.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/hero-small.webp");
+  background-size: cover;
+}</style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="backshadow">
+        <h1 class="hero_title">
+          Lorem ipsum dolor sit amet
+        </h1>
+      </div>
+    </header>
+    <div class="cualities">
+      <div class="cards center cualities_one">
+        <img data-src="./images/codificacion.svg" height="120px" alt="" />
+        <p class="card_text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          expedita repellendus vero tempore est tempora dolores illo omnis neque
+          iste at, voluptate, sapiente, deleniti adipisci! Ea perspiciatis
+          voluptatem maxime consequatur!
+        </p>
+      </div>
+      <div class="cards center cualities_two">
+        <img data-src="./images/codificacion (1).svg" height="120px" alt="" />
+        <p class="card_text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          expedita repellendus vero tempore est tempora dolores illo omnis neque
+          iste at, voluptate, sapiente, deleniti adipisci! Ea perspiciatis
+          voluptatem maxime consequatur!
+        </p>
+      </div>
+      <div class="cards center cualities_three">
+        <img data-src="./images/ordenador-portatil.svg" height="120px" alt="" />
+        <p class="card_text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          expedita repellendus vero tempore est tempora dolores illo omnis neque
+          iste at, voluptate, sapiente, deleniti adipisci! Ea perspiciatis
+          voluptatem maxime consequatur!
+        </p>
+      </div>
+    </div>
+    <div class="marks">
+      <h2 class="marks_title">Estas marcas confian en nosotros</h2>
+      <div class="mark_logos">
+        <img
+          data-src="./images/marcas/gobiernochile.webp"
+          alt="Logo gobierno de chile"
+        />
+        <img data-src="./images/marcas/lascondes.webp" alt="logo las condes" />
+        <img data-src="./images/marcas/puc.webp" alt=" logo p u c" />
+        <img data-src="./images/marcas/saludcchc.webp" alt="logo salud" />
+      </div>
+    </div>
+    <div class="cta">
+      <h3 class="cta__title">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+        repellendus reprehenderit quod, aliquam veniam cum earum rem saepe
+        provident optio
+      </h3>
+      <button class="btn btn_cta">Empezar</button>
+    </div>
+    <script>
+      //prettier-ignore
+      !function (t) { "use strict"; t.loadCSS || (t.loadCSS = function () { }); var e = loadCSS.relpreload = {}; if (e.support = function () { var e; try { e = t.document.createElement("link").relList.supports("preload") } catch (t) { e = !1 } return function () { return e } }(), e.bindMediaToggle = function (t) { var e = t.media || "all"; function a() { t.addEventListener ? t.removeEventListener("load", a) : t.attachEvent && t.detachEvent("onload", a), t.setAttribute("onload", null), t.media = e } t.addEventListener ? t.addEventListener("load", a) : t.attachEvent && t.attachEvent("onload", a), setTimeout(function () { t.rel = "stylesheet", t.media = "only x" }), setTimeout(a, 3e3) }, e.poly = function () { if (!e.support()) for (var a = t.document.getElementsByTagName("link"), n = 0; n < a.length; n++) { var o = a[n]; "preload" !== o.rel || "style" !== o.getAttribute("as") || o.getAttribute("data-loadcss") || (o.setAttribute("data-loadcss", !0), e.bindMediaToggle(o)) } }, !e.support()) { e.poly(); var a = t.setInterval(e.poly, 500); t.addEventListener ? t.addEventListener("load", function () { e.poly(), t.clearInterval(a) }) : t.attachEvent && t.attachEvent("onload", function () { e.poly(), t.clearInterval(a) }) } "undefined" != typeof exports ? exports.loadCSS = loadCSS : t.loadCSS = loadCSS }("undefined" != typeof global ? global : this);
+    </script>
+
+    <script defer>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          console.log("Funciona");
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script defer src="./index.js"></script>
+  </body>
+</html>

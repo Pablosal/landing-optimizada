@@ -1,0 +1,16 @@
+@media (max-width: 1024px) {
+  .hero {
+    background: url("./images/hero-medium.webp");
+  }
+  .cualities {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 3fr 3fr 3fr;
+    justify-items: center;
+  }
+}
+@media (max-width: 720px) {
+  .hero {
+    background: url("./images/hero-large.webp");
+  }
+}
